@@ -14,12 +14,12 @@ public class LocatorsStrategy {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-            WebElement inputSearch =driver.findElement(By.tagName("textarea"));
+          WebElement inputSearch =driver.findElement(By.tagName("textarea"));
             inputSearch.sendKeys("Google Water");
             WebElement inputButton =driver.findElement(By.name(("btnI")));
+            inputButton.click();
 
 
-        inputButton.click();
 
 
 
