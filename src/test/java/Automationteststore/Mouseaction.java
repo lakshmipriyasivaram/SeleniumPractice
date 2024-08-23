@@ -23,7 +23,12 @@ public class Mouseaction {
          WebElement B = driver.findElement(By.xpath("//div[@id='column-b']"));
          Actions a = new Actions(driver);
          a.dragAndDrop(A ,B).build().perform();
-         driver.quit();
+        //driver.quit();
+        WebElement source = driver.findElement(By.xpath("(//div[@id='column-a'])"));
+        WebElement target = driver.findElement(By.xpath("(//div[@id='column-b'])"));
+        a.moveToElement(source).clickAndHold(source).moveToElement(target).release(target)
+                .build().perform();
+
     }
 
 }
